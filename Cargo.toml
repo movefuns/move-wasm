@@ -1,0 +1,17 @@
+[workspace]
+resolver = "2"
+
+members = [
+
+]
+
+# All workspace members should inherit these keys
+# for package declarations.
+[workspace.package]
+authors = ["Move Funs <opensource@movefuns.com>"]
+edition = "2021"
+homepage = "https://github.com/movefuns"
+license = "Apache-2.0"
+publish = true
+repository = "https://github.com/movefuns/move-wasm"
+rust-version = "1.64"
