@@ -1,0 +1,20 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in library 'aptos-api'",
+            "cargo": {
+                "args": [
+                    "build",
+                ],
+            },
+            "args": ["compile", "--package-dir", "/Volumes/dev/project/web3/aptos/aptos-core/aptos-move/move-examples/hello_blockchain", "--named-addresses", "hello_blockchain=801d17f0a29797c28324e5b1981cc5b0d4946ac365131c738c4e29e29866c203"],
+            "cwd": "${workspaceFolder}/crates/aptos"
+        },
+    ]
+}

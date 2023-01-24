@@ -1,0 +1,34 @@
+# Rust specific ignores
+# Please follow https://help.github.com/en/articles/ignoring-files to create a global
+# .gitignore file locally for IDE/Emacs/Vim generated files.
+**/target
+**/*.rs.bk
+.idea/
+
+# macOS Specific ignores
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# VSCode settings
+.vscode/

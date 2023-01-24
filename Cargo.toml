@@ -2,7 +2,9 @@
 resolver = "2"
 
 members = [
-
+    "common",
+    "crates/aptos",
+    "crates/named-lock"
 ]
 
 # All workspace members should inherit these keys
@@ -15,3 +17,14 @@ license = "Apache-2.0"
 publish = true
 repository = "https://github.com/movefuns/move-wasm"
 rust-version = "1.64"
+
+[workspace.dependencies]
+anyhow = "1.0.62"
+base64 = "0.13.0"
+clap = { version = "3.2.22", features = ["derive", "env", "suggestions"] }
+serde = { version = "1.0.137", features = ["derive", "rc"] }
+serde_bytes = "0.11.6"
+serde_json = { version = "1.0.81", features = ["preserve_order"] }
+serde_yaml = "0.8.24"
+hex = "0.4.3"
+once_cell = "1.10.0"

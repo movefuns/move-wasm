@@ -13,3 +13,6 @@ wasm version of the move language tools
 | disassemble |   MVP    |  MVP  |  MVP |
 | run         |   MVP    |  MVP  |  MVP |
 | test        |   MVP    |  MVP  |  MVP |
+
+## Support wasm Runtim
+

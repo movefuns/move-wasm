@@ -1,0 +1,16 @@
+[package]
+name = "common"
+description = "common"
+version = "0.1.0"
+
+# Workspace inherited keys
+authors = { workspace = true }
+edition = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+publish = false 
+repository = { workspace = true }
+rust-version = { workspace = true }
+
+[features]
+js = []

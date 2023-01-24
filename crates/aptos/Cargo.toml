@@ -1,0 +1,49 @@
+[package]
+name = "aptos-wasm"
+description = "Aptos wasm tool"
+version = "0.1.0"
+
+# Workspace inherited keys
+authors = { workspace = true }
+edition = { workspace = true }
+homepage = { workspace = true }
+license = { workspace = true }
+publish = { workspace = true }
+repository = { workspace = true }
+rust-version = { workspace = true }
+
+
+[dependencies]
+anyhow = { workspace = true }
+base64 = { workspace = true }
+bcs = { git = "https://github.com/aptos-labs/bcs.git", rev = "d31fab9d81748e2594be5cd5cdf845786a30562d" }
+better_any = "0.1.1"
+clap = { workspace = true }
+hex = { workspace = true }
+serde = { workspace = true }
+serde_bytes = { workspace = true }
+serde_yaml = { workspace = true }
+serde_json = { workspace = true }
+once_cell = { workspace = true }
+async-trait = "0.1.53"
+smallvec = "1.8.0"
+thiserror = "1.0.37"
+flate2 = "1.0.24"
+itertools = "0.10.3"
+# tokio = { version = "1.21.0", features = ["full"] }
+# tokio = { git = "https://github.com/tokio-rs/tokio", branch = "master", features = ["macros", "rt"] }
+# tokio = { version = "1.20.1", features = ["rt"] }
+
+codespan-reporting = "0.11.1"
+
+move-compiler = { git = "https://github.com/movefuns/move", branch="aptos-wasm" }
+move-package = { git = "https://github.com/movefuns/move", branch="aptos-wasm" }
+move-command-line-common = { git = "https://github.com/movefuns/move", branch="aptos-wasm" }
+move-binary-format = { git = "https://github.com/movefuns/move", branch="aptos-wasm" }
+move-vm-types = { git = "https://github.com/movefuns/move", branch="aptos-wasm" }
+move-vm-runtime = { git = "https://github.com/movefuns/move", branch="aptos-wasm",features = ["lazy_natives"] }
+move-core-types = { git = "https://github.com/movefuns/move", branch="aptos-wasm",features = ["address32"] }
+move-model = { git = "https://github.com/movefuns/move", branch="aptos-wasm" }
+move-disassembler = { git = "https://github.com/movefuns/move", branch="aptos-wasm" }
+[features]
+js = []

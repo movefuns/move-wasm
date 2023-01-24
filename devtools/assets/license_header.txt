@@ -1,2 +1,3 @@
-Copyright (c) Aptos
+Copyright (c) The MoveFuns Contributors
 SPDX-License-Identifier: Apache-2.0
+s
