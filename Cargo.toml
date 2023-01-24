@@ -3,8 +3,7 @@ resolver = "2"
 
 members = [
     "common",
-    "crates/aptos",
-    "crates/named-lock"
+    "crates/aptos"
 ]
 
 # All workspace members should inherit these keys

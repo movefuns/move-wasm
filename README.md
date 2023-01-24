@@ -9,7 +9,7 @@ wasm version of the move language tools
 | newPackage  |   MVP    |  MVP  |  MVP |
 | loadPackage |   MVP    |  MVP  |  MVP |
 | download    |   MVP    |  MVP  |  MVP |
-| compile     |   MVP    |  MVP  |  MVP |
+| compile     |   MVP    |   Y   |  MVP |
 | disassemble |   MVP    |  MVP  |  MVP |
 | run         |   MVP    |  MVP  |  MVP |
 | test        |   MVP    |  MVP  |  MVP |
