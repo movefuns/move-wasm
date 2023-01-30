@@ -118,7 +118,6 @@ pub struct CompilePackage {
     /// This metadata can be used to construct a transaction to publish a package.
     #[clap(long)]
     pub(crate) save_metadata: bool,
-
     #[clap(flatten)]
     pub(crate) included_artifacts_args: IncludedArtifactsArgs,
     #[clap(flatten)]
@@ -139,6 +138,23 @@ pub struct Disassemble {
     /// The name of the module or script in the package to disassemble
     #[clap(long = "name")]
     pub module_or_script_name: String,
+}
+
+/// TODO
+/// Start a explorer
+#[derive(Parser)]
+#[clap(name= "Interactive")]
+pub struct Interactive {
+
+}
+
+impl CliCommand<Vec<String>> for Interactive {
+    fn command_name(&self) -> &'static str {
+        "Interactive"
+    }
+    fn execute(self) -> CliTypedResult<Vec<String>> {
+        unimplemented!("Interactive")
+    }
 }
 
 /// TODO

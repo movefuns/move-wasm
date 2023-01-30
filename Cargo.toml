@@ -3,7 +3,9 @@ resolver = "2"
 
 members = [
     "common",
-    "crates/aptos"
+    "crates/aptos",
+    "crates/sui",
+    "examples/aptos"
 ]
 
 # All workspace members should inherit these keys
@@ -18,6 +20,9 @@ repository = "https://github.com/movefuns/move-wasm"
 rust-version = "1.64"
 
 [workspace.dependencies]
+# Internal crate dependencies.
+# Please do not add any test features here: they should be declared by the individual crate.
+aptos-wasm = { path = "crates/aptos" }
 anyhow = "1.0.62"
 base64 = "0.13.0"
 clap = { version = "3.2.22", features = ["derive", "env", "suggestions"] }

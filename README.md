@@ -1,6 +1,8 @@
 # move-wasm
 
-wasm version of the move language tools
+wasm32-wasi version of the move language tools
+
+NOTE: Wasm is currently experimental, It mainly serves [js](https://github.com/movefuns/move-js)
 
 ## Features
 
@@ -15,4 +17,6 @@ wasm version of the move language tools
 | test        |   MVP    |  MVP  |  MVP |
 
 ## Support wasm Runtim
+
+Wasmtime 
 

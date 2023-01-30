@@ -6,7 +6,8 @@ use crate::move_tool::{
     types::{cli_command::CliCommand, result::CliResult},
     CompilePackage,
     Disassemble,
-    TODO
+    TODO,
+    Interactive
 };
 use clap::Parser;
 
@@ -14,6 +15,7 @@ use clap::Parser;
 #[derive(Parser)]
 #[clap(name = "aptos", author, version, propagate_version = true)]
 pub enum Tool {
+    Interactive(Interactive),
     Compile(CompilePackage),
     Disassemble(Disassemble),
     Run(TODO),
@@ -24,6 +26,7 @@ impl Tool {
     pub fn execute(self) -> CliResult {
         use Tool::*;
         match self {
+            Interactive(tool) => tool.execute_serialized(),
             Compile(tool) => tool.execute_serialized(),
             Disassemble(tool) => tool.execute_serialized(),
             Run(tool)=> tool.execute_serialized(),
