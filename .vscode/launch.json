@@ -20,6 +20,21 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "interactive",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin",
+                    "aptos-wasm"
+                ],
+            },
+            "args": ["interactive"],
+            "cwd": "${workspaceFolder}/crates/aptos"
+        },
+
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "example",
             "cargo": {
                 "args": [

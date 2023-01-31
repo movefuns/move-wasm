@@ -1,10 +1,11 @@
 pub mod types;
 
-use clap::{ArgEnum, Parser};
+use clap::{ArgEnum, Parser, SubCommand};
 use std::{
     collections::BTreeMap,
     fmt::{Display, Formatter},
     str::FromStr,
+    fs
 };
 
 use crate::framwork::{BuildOptions, BuiltPackage};
@@ -127,7 +128,6 @@ pub struct CompilePackage {
 /// TODO
 /// Disassemble the Move bytecode pointed to
 #[derive(Parser)]
-#[clap(name = "disassemble")]
 pub struct Disassemble {
     /// Start a disassembled bytecode-to-source explorer
     #[clap(long = "interactive")]
@@ -140,20 +140,60 @@ pub struct Disassemble {
     pub module_or_script_name: String,
 }
 
-/// TODO
+
 /// Start a explorer
 #[derive(Parser)]
-#[clap(name= "Interactive")]
-pub struct Interactive {
-
+#[clap(name = "interactive")]
+pub struct Interactive{
+    #[clap(long = "order-path")]
+    pub order_path: Option<String>,
+    #[clap(long = "output-path")]
+    pub output_path: Option<String>,
 }
 
 impl CliCommand<Vec<String>> for Interactive {
+
     fn command_name(&self) -> &'static str {
-        "Interactive"
+        "InteractiveA"
     }
+
     fn execute(self) -> CliTypedResult<Vec<String>> {
-        unimplemented!("Interactive")
+        loop{
+            const DEFAULT_CONNAND:&str = "/Volumes/dev/project/movefuns/move-wasm/order";
+            const DEFAULT_OK:&str = "/workspace/order/result_ok";
+            const DEFAULT_ERR:&str = "/workspace/order/result_err";
+            
+            let s = match self.order_path {
+                Some(ref v) => v.clone(),
+                None => String::from(DEFAULT_CONNAND)
+            };
+
+            let path = std::path::Path::new(&s);
+            while !path.exists() {
+                let t = std::time::Duration::from_millis(1000);
+                std::thread::sleep(t);
+            }
+
+            let s = String::from_utf8(fs::read(&s).unwrap()).unwrap();
+
+            if s =="exit" {
+                break;
+            }
+
+            let mut test :Vec<&str>= s.split(",").collect();
+            test.insert(0, "");
+
+            match crate::Tool::parse_from(test).execute() {
+                Ok(inner) => println!("{}", inner),
+                Err(inner) => {
+                    println!("{}", inner);
+                }
+            }
+
+            fs::remove_file(path);
+        }
+
+        Ok(vec!["Exit".to_string()])
     }
 }
 

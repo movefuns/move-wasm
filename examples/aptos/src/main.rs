@@ -2,6 +2,7 @@ use anyhow::Result;
 use wasi_experimental_http_wasmtime::{HttpCtx, HttpState};
 use wasmtime::*;
 use wasmtime_wasi::{WasiCtx, WasiCtxBuilder};
+
 struct IntegrationTestsCtx {
     pub wasi: WasiCtx,
     pub http: HttpCtx,

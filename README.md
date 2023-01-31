@@ -8,13 +8,14 @@ NOTE: Wasm is currently experimental, It mainly serves [js](https://github.com/m
 
 | Features    | Starcoin | Aptos |  Sui |
 | :---------- | :------: | :---: | ---: |
-| newPackage  |   MVP    |  MVP  |  MVP |
-| loadPackage |   MVP    |  MVP  |  MVP |
-| download    |   MVP    |  MVP  |  MVP |
-| compile     |   MVP    |   Y   |  MVP |
-| disassemble |   MVP    |  MVP  |  MVP |
-| run         |   MVP    |  MVP  |  MVP |
-| test        |   MVP    |  MVP  |  MVP |
+| interactive |    N     |   Y   |    N |
+| newPackage  |    N     |   N   |    N |
+| loadPackage |    N     |   N   |    N |
+| download    |    N     |   N   |    N |
+| compile     |    N     |   Y   |    N |
+| disassemble |    N     |   N   |    N |
+| run         |    N     |   N   |    N |
+| test        |    N     |   N   |    N |
 
 ## Support wasm Runtim
 

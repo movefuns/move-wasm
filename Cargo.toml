@@ -4,8 +4,11 @@ resolver = "2"
 members = [
     "common",
     "crates/aptos",
-    "crates/sui",
     "examples/aptos"
+]
+
+default-members = [
+    "crates/aptos",
 ]
 
 # All workspace members should inherit these keys

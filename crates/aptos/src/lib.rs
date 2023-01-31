@@ -34,3 +34,23 @@ impl Tool {
         }
     }
 }
+
+//pub trait ParserX: FromArgMatches {
+//    /// Parse from `std::env::args_os()`, exit on error
+//    fn parseJson() -> move_tool::types::result::CliTypedResult<Self> {
+//
+//        let order = std::fs::read("/Volumes/dev/project/movefuns/move-wasm/order.json").unwrap();
+//
+//        let mut matches = <Self as CommandFactory>::command().get_matches();
+//        let res = <Self as FromArgMatches>::from_arg_matches_mut(&mut matches)
+//            .map_err(format_error::<Self>);
+//        match res {
+//            Ok(s) => s,
+//            Err(e) => {
+//                // Since this is more of a development-time error, we aren't doing as fancy of a quit
+//                // as `get_matches`
+//                e.exit()
+//            }
+//        }
+//    }
+//}

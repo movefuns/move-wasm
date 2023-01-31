@@ -14,7 +14,7 @@ use super::{
 #[async_trait]
 pub trait CliCommand<T: Serialize + Send>: Sized + Send {
     /// Returns a name for logging purposes
-     fn command_name(&   self) -> &'static str;
+     fn command_name(&self) -> &'static str;
 
     /// Executes the command, returning a command specific type
      fn execute(self) -> CliTypedResult<T>;

@@ -2859,15 +2859,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "73473c0e59e6d5812c5dfe2a064a6444949f089e20eec9a2e5506596494e4623"
 
 [[package]]
-name = "sui-wasm"
-version = "0.1.0"
-dependencies = [
- "bytes",
- "http",
- "wasi-experimental-http",
-]
-
-[[package]]
 name = "syn"
 version = "1.0.107"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3244,19 +3235,6 @@ dependencies = [
  "tracing",
  "wiggle",
  "winapi",
-]
-
-[[package]]
-name = "wasi-experimental-http"
-version = "0.10.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9805001ce441ef7cd4681b7688f2392e15abae743f2ad0714ffc6ebc5a28dc79"
-dependencies = [
- "anyhow",
- "bytes",
- "http",
- "thiserror",
- "tracing",
 ]
 
 [[package]]
