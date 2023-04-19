@@ -13,7 +13,7 @@ NOTE: Wasm is currently experimental, It mainly serves [js](https://github.com/m
 | loadPackage |    N     |   N   |    N |
 | download    |    N     |   N   |    N |
 | compile     |    N     |   Y   |    N |
-| disassemble |    N     |   N   |    N |
+| disassemble |    N     |   Y   |    N |
 | run         |    N     |   N   |    N |
 | test        |    N     |   N   |    N |
 
